@@ -5,8 +5,8 @@
 # Parameters
 nc: 1 # number of classes
 scales:
-  n: [0.50, 0.25, 1024]
-  s: [0.50, 0.50, 1024]
+  n: [0.50, 0.50, 1024]  # was [0.50, 0.25, 1024]
+  s: [0.50, 0.50, 1024]  # Standard Small
 
 # Backbone (Stops at P4)
 backbone:
@@ -46,4 +46,5 @@ head:
 
   # --- Detection Head ---
   # Detects on P2 (15), P3 (18), P4 (21)
+
   - [[15, 18, 21], 1, Detect, [nc]] # 22
